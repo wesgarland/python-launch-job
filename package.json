@@ -1,0 +1,14 @@
+{
+  "name": "python-launch-job",
+  "version": "1.0.0",
+  "description": "Quick demo which uses PythonMonkey to load dcp-client and launch a job.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dcp-client": "file:../dcp-client"
+  }
+}
