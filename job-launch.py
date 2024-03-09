@@ -7,11 +7,10 @@
 #
 
 import pythonmonkey as pm
-import asyncio
 
 async def run_job():
     dcp = pm.globalThis.dcp
-    job = dcp.compute['for']([1,2,3], "(x) => 3 * x");  # (input set, work function)
+    job = dcp.compute['for']([1,2,3], "(x) => { progress(); return 3 * x }");  # (input set, work function)
     job.on("readystatechange", lambda state: print ("ready state change:", state))
     job.on("accepted",         lambda x:     print ("job accepted, id", job.id))
     job.on("result",           lambda res:   print ("got result for slice number", res.sliceNumber))
