@@ -27,5 +27,5 @@ reallyJustFetch(url)
     except Exception as e:
         print("trapped exception", e)
 
-dcp_client = pm.require('dcp-client/index.py') # should be just dcp-client, see pm issue 247
+dcp_client = pm.require('dcp-client')
 dcp_client['init'](go)
